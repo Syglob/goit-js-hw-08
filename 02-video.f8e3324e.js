@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"iiAF":[function(require,module,exports) {
 "use strict";var e=o(require("lodash.throttle"));function o(e){return e&&e.__esModule?e:{default:e}}const t=document.querySelector("iframe"),n=new Vimeo.Player(t);n.on("play",function(){console.log("played video!")}),n.getVideoTitle().then(function(e){console.log("title:",e)});const l=function(){console.log("played the video!")};
 },{"lodash.throttle":"FNyO"}]},{},["iiAF"], null)
-//# sourceMappingURL=/parcel-project-template/02-video.f8e3324e.js.map
+//# sourceMappingURL=syglob.github.io/goit-js-hw-08/02-video.f8e3324e.js.map
