@@ -6,14 +6,14 @@ const email = document.querySelector('input');
 const textarea = document.querySelector('.feedback-form textarea');
 restoreForm();
 const formData = {};
-//
+//get data from inputs
 form.addEventListener('input', throttle(dataInputs, 1000));
 function dataInputs(e) {
   formData[e.target.name] = e.target.value;
   console.log(formData);
   localStorage.setItem(LOCALSTORAGE, JSON.stringify(formData));
 }
-//
+//resert local storage
 form.addEventListener('submit', formSubmit);
 function formSubmit(e) {
   e.preventDefault();
@@ -21,7 +21,7 @@ function formSubmit(e) {
   console.log('form submitted');
   localStorage.removeItem(LOCALSTORAGE);
 }
-//
+//restore form from local storage
 function restoreForm() {
   const dataSave = localStorage.getItem(LOCALSTORAGE);
   if (dataSave) {
