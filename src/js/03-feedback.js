@@ -5,7 +5,8 @@ const LOCALSTORAGE = 'feedback-form-state';
 const email = document.querySelector('input');
 const textarea = document.querySelector('.feedback-form textarea');
 restoreForm();
-const formData = {};
+
+const formData = { email: '', message: '' };
 //get data from inputs
 form.addEventListener('input', throttle(dataInputs, 1000));
 function dataInputs(e) {
@@ -22,6 +23,7 @@ function formSubmit(e) {
   localStorage.removeItem(LOCALSTORAGE);
 }
 //restore form from local storage
+
 function restoreForm() {
   const dataSave = localStorage.getItem(LOCALSTORAGE);
   if (dataSave) {
